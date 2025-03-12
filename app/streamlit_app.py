@@ -26,10 +26,16 @@ st.markdown("Amazon SageMaker Canvasで作成した時系列モデルの分析�
 # データの読み込み関数
 @st.cache_data
 def load_data():
-    # 実際のデータパスを指定
-    train_path = "../data/train/SKU_rev_train.csv"
-    test_path = "../data/test/SKU需要予測_test.csv"
-    result_path = "../data/result/result_summary.csv"
+    # データパスを指定（Streamlit Cloudでも動作するように絶対パスを使用）
+    import os
+    
+    # アプリのルートディレクトリを取得
+    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    
+    # データパスを絶対パスで指定
+    train_path = os.path.join(root_dir, "data", "train", "SKU_rev_train.csv")
+    test_path = os.path.join(root_dir, "data", "test", "SKU需要予測_test.csv")
+    result_path = os.path.join(root_dir, "data", "result", "result_summary.csv")
     
     # データの読み込み
     train_df = pd.read_csv(train_path)
