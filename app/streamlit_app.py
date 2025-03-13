@@ -106,7 +106,7 @@ def get_feature_importance(df, sku_id):
     # 特徴量の列名を取得
     feature_cols = [
         'Price', 'coupon_rate', 'holiday', 'tempreture',
-        'precipitation', 'Sales_lag_1', 'Sales_lag_7', 'CPI',
+        'precipitation', 'Sales_lag_1', 'Sales_lag_7',
         'Closed_flag', 'market_flag'
     ]
     
@@ -251,7 +251,7 @@ def plot_demand_factors(df, sku_id):
     # 特徴量の列名を取得
     feature_cols = [
         'Price', 'coupon_rate', 'holiday', 'tempreture',
-        'precipitation', 'Sales_lag_1', 'Sales_lag_7', 'CPI',
+        'precipitation', 'Sales_lag_1', 'Sales_lag_7',
         'Closed_flag', 'market_flag'
     ]
     
@@ -274,7 +274,6 @@ def plot_demand_factors(df, sku_id):
         'precipitation': '降水量',
         'Sales_lag_1': '前日売上',
         'Sales_lag_7': '前週売上',
-        'CPI': '消費者物価指数',
         'Closed_flag': '休業フラグ',
         'market_flag': '市場フラグ'
     }
@@ -304,7 +303,7 @@ def calculate_interactions(df, sku_id):
     # 特徴量の列名を取得
     feature_cols = [
         'Price', 'coupon_rate', 'holiday', 'tempreture',
-        'precipitation', 'Sales_lag_1', 'Sales_lag_7', 'CPI',
+        'precipitation', 'Sales_lag_1', 'Sales_lag_7',
         'Closed_flag', 'market_flag'
     ]
     
@@ -359,7 +358,6 @@ def calculate_interactions(df, sku_id):
         'precipitation': '降水量',
         'Sales_lag_1': '前日売上',
         'Sales_lag_7': '前週売上',
-        'CPI': '消費者物価指数',
         'Closed_flag': '休業フラグ',
         'market_flag': '市場フラグ'
     }
